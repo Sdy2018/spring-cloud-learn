@@ -1,0 +1,17 @@
+server:
+    port: 7001
+spring:
+  application:
+    name: eureka_server
+eureka:
+  instance:
+    hostname: 127.0.0.1:7001
+  client:
+#    是否向服务中心注册自己
+    register-with-eureka: false
+#    是抓取服务
+    fetch-registry: false
+    service-url:
+#      做集群的时候虽然客户端都想集群注册了服务,但是并不是每个服务都有全部的客户应用,在某一个服务关闭后,此服务上的客户
+ # 就会转交给另一个服务
+      defaultZone: http://localhost:7002

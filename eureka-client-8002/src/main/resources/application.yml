@@ -1,0 +1,13 @@
+server:
+  port: 8002
+spring:
+  application:
+#    应用名,不能有下划线,负载均衡需要应用名一致
+    name: eurekaClient
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+info:
+  app.name: adeng1024-springcloud
+  company.name: com.adeng1024

@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+info:
+  app.name: adeng1024-springcloud
+  company.name: com.adeng1024
+

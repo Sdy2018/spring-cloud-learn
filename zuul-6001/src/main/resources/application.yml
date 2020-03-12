@@ -1,0 +1,22 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: springcloud-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/,http://127.0.0.1:7003/eureka/
+    instance:
+      prefer-ip-address: true
+
+
+zuul:
+  routes:
+    suibian:
+      serviceId: eureka-client
+      path: /test/** #将服务名改一个名字代替服务名
+  ignored-services: '*'      #忽略服务名，不能用服务名访问了
+#  prefix:                                           #设置公共前缀

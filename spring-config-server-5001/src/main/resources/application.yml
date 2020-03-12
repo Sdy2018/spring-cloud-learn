@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Sdy2018/springcloud-config-test.git
+server:
+  port: 5001
